@@ -22,9 +22,9 @@ MSmoothness = 20 # Max Mode Smoothness
 ASmoothness = 5  # Average Mode Smoothness
 
 HELP_TEXT='''
-USAGE `fft (FILE) [OPTIONS] 
+USAGE '~/python3 fft.py (THEME) [OPTIONS]'
 
-OPTIONS:
+------------------OPTIONS------------------
 #   -h Display this help menu
 #   -m Mono Mode
 #   -s Stereo Mode
@@ -32,8 +32,8 @@ OPTIONS:
 #   -l Channel Left (mono)
 #   -r Channel Right (mono)
 #   -a Channel Average (mono)
-#   -M
-#   -A
+#   -M Max Smoothness
+#   -A Avarage Smoothness
 #   -H High Smoothness
 #   -L Low Smoothness
 '''
@@ -59,19 +59,19 @@ for a in sys.argv:
 if len(sys.argv)>=2 or not DefaultEnable:
     if (len(sys.argv)==1 or sys.argv[1]=="help" or "h" in options):
         print(HELP_TEXT)
-        print("THEMES:")
+        print("------------------THEMES------------------")
         files=os.listdir('themes')
         for f in files:
             if f[-3:]==".th":
-                print("#",f.replace(".th",""))
+                print("#    ",f.replace(".th",""))
         exit()
         
     else:
-        f=open(f"{sys.argv[1]}.th")
+        f=open(f"themes/{sys.argv[1]}.th")
         T=f.read().split("\n")
         for l in T:
             exec(l)
-else:
+else: #No Theme Imported
     midchars = ""
     boxchars = [" ","▁","▂","▃","▄","▅","▆","▇","█"]
     '''
