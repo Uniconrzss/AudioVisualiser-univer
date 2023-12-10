@@ -1,0 +1,59 @@
+boxchars = ["═","▁","▂","▃","▄","▅","▆","▇"]
+
+channels = 10 #I havent noticed any effect
+smoothness=1 #I havent noticed any effect
+rows = 15 #I havent noticed any effect
+run = False #I havent noticed any effect
+smoothness=1 #I havent noticed any effect
+avgMode=False #I havent noticed any effect
+boost=1 #I havent noticed any effect
+includeAvg = False; #I havent noticed any effect
+hsv1=(0.5,1,255)#1,1,255 #I havent noticed any effect
+hsv2=(1,1,255)#1,1,255 #I havent noticed any effect
+midchars = "" #I havent noticed any effect
+hueshift=1 #I havent noticed any effect
+
+MonoChannel=2 # Left 1, Avg 2, Right 3
+monoMode=True 
+width = 2 # Width of each bar, for mono mode
+widthalt = 2 # Width of each bar element, width = widthalt * 3
+nobox = False # Removes boxes and frequency bars
+
+forceforec = True
+forcebackc = True
+colourmode = 5 # Which colouring style to use?
+
+#Colourmode Table
+#0 None/Foreground
+#1 Green/Yellow/Red Level Indicator
+#2 Solid Colour
+#3 G/Y/R /w dark off (LED style)
+#4 Vertical Gradient
+#5 Horizontally defined Vertical Gradient
+#6 4/VG volume dependant
+#7 Hue Shift Volume Dependant
+
+colourfore=hex2rgb("#e4e8ff") #Foreground color
+colourback=hex2rgb("#a52a2a") #Background color
+
+colour1=hex2rgb("#d0e0e3") #Top-Right color on Colormode 5
+colour2=hex2rgb("#d0e0e3") #Top-Left color on Colormode 5
+colour3=hex2rgb("#98a3a5") #Bottom-Right color on Colormode 5
+colour4=hex2rgb("#98a3a5") #Bottom-Left color on Colormode 5
+
+# Decimal thresholds for where the volume effects should take effect
+volLnC =1# Linear (ax) Multiplier (a) for volume curve
+volExC =5# Exponential (ax**n) multiplier (a) for volume curve
+volExI =3# Exponential (ax**n) index (n) for volume curve
+#M6: Top High
+#M6: Top Low
+#M6: Bottom High
+#M6: Bottom Low
+
+padding = 1 # padding each side
+upperLimit=5000
+lowerLimit=100
+startComp=1000 # Start Compenstation, prevents large bins low down, 
+                    #    defines the starting frequency rate increase
+min_dB=20
+

@@ -1,9 +1,7 @@
-import serial
 import time
 import sounddevice as sd
 import numpy as np
 import scipy.io.wavfile as wav
-import socket
 import threading
 import time
 import math
@@ -62,7 +60,7 @@ if len(sys.argv)>=2 or not DefaultEnable:
     if (len(sys.argv)==1 or sys.argv[1]=="help" or "h" in options):
         print(HELP_TEXT)
         print("THEMES:")
-        files=os.listdir(FILENAME)
+        files=os.listdir('themes')
         for f in files:
             if f[-3:]==".th":
                 print("#",f.replace(".th",""))
@@ -74,12 +72,8 @@ if len(sys.argv)>=2 or not DefaultEnable:
         for l in T:
             exec(l)
 else:
-    #boxchars = ["●","●"]
-    #boxchars = ["○","◒","●"]
     midchars = ""
     boxchars = [" ","▁","▂","▃","▄","▅","▆","▇","█"]
-    #boxchars = [" ","│"]
-    #boxchars = ["  ",["🤣 ","🙏 ","👁 ","👍 ","💪 ","⚠ "]]
     '''
     boxchars = [[" "],
                 [" ","."],
